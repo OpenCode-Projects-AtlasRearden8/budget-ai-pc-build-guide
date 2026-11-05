@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAM and VRAM, Explained — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html" class="active">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="ram-and-vram-explained">RAM and VRAM, Explained</h1>
+<p><em>The two numbers that decide which AI models can run on your machine — and how big each should be.</em></p>
+<p>Of all the confusing stuff in PC building, the RAM situation is the one that most reliably fries beginners' circuits, because there are <strong>two kinds</strong> with confusingly similar names, and local AI cares about both. This chapter makes it simple, permanent, and honest.</p>
+<h2 id="the-elevator-version">The elevator version</h2>
+<ul>
+<li><strong>RAM</strong> is your computer's general workbench. Everything the CPU is actively working with sits there.</li>
+<li><strong>VRAM</strong> is a smaller, <em>much faster</em> workbench that lives <em>on the graphics card itself</em>, for the graphics card's exclusive use. The AI model's math happens almost entirely on the graphics card, so the model's numbers live — or are supposed to live — in VRAM.</li>
+</ul>
+<p>They are separate pots. Water doesn't flow between them. And when people online say <em>"no, your VRAM is full"</em> with an air of tragedy, this is why.</p>
+<h2 id="why-vram-size-model-choice">Why VRAM size = model choice</h2>
+<p>An AI model is, deep down, an enormous table of numbers (weights) — a very long recipe of <em>what to pay attention to when something is mentioned</em>. When you run a model, all those numbers get loaded into fast memory, and then billions of small "look up and multiply" operations happen on them at speeds no general-purpose CPU can approach.</p>
+<p><strong>So the first question is literally arithmetic: does the model's worth of numbers fit in the fast memory you have?</strong></p>
+<p>A rough rule (approximate, human-scale, honest) for the standard way models are stored today:</p>
+<ul>
+<li>Model size in <strong>billions of parameters</strong> (the "7B", "13B" you see in model names) × roughly <strong>0.6 GB per billion</strong> = about how much VRAM it needs, leave a little headroom.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>VRAM you have</th>
+<th>Roughly what runs</th>
+<th>Feels like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4 GB</td>
+<td>Small models (up to ~7B)</td>
+<td>Quick, snappy, occasionally shallow. Great for quick questions and drafting.</td>
+</tr>
+<tr>
+<td>8 GB</td>
+<td>Small-to-mid models (up to ~13B)</td>
+<td>The classic budget-build zone. Genuinely useful daily.</td>
+</tr>
+<tr>
+<td>12 GB</td>
+<td>Midsize models comfortably</td>
+<td>Answers noticeably more thoughtful; the sweet-spot build territory.</td>
+</tr>
+<tr>
+<td>16 GB+</td>
+<td>Midsize-plus models, longer documents</td>
+<td>"Is this thing actually smart?" territory. Upper range of used-market frugality.</td>
+</tr>
+</tbody>
+</table>
+<p>(These are coarse ranges. Models vary — some are packed more cleverly than others, and the tools that run them compress differently. Treat the table as orientation, not law.)</p>
+<p><strong>When VRAM runs out, the tool does a clever, slow fallback: it leaves part of the model in the graphics card's fast memory and shovels the overflow into your ordinary RAM.</strong> This is called <em>offloading</em>. The model still runs! Answers are still right! They're just <strong>much slower</strong>, because an offload round-trip costs time. So "doesn't fit" doesn't mean "impossible" — it means "slow enough that you'll notice and probably not enjoy it."</p>
+<p>This is the deep reason the <a href="price-targets.html">price chapter</a> said <strong>buy memory first, speed second</strong>: a faster card that holds the whole model comfortably beats a slightly-faster card that has to spill half the model into regular RAM.</p>
+<h2 id="how-much-ram-the-other-pot-should-you-buy">How much RAM (the other pot) should you buy?</h2>
+<p>RAM matters in three ways, in this order of importance:</p>
+<ol>
+<li><strong>Everything that isn't the model.</strong> Your operating system, browser, the program serving the AI, your document editor, everything — all this claims RAM. When the OS runs out, it swaps to disk (slow, unpleasant). Wanting an AI tool and a browser open at once is RAM territory.</li>
+<li><strong>Offloading overflow.</strong> If a model doesn't quite fit in VRAM, the spill goes to RAM — a machine with generous RAM can <em>run</em> models that are a size class too big, slowly.</li>
+<li><strong>Caching and wiggle room.</strong> Tools that load documents for summarization put the document in RAM. Big documents want room.</li>
+</ol>
+<p>Plain guidance by budget:</p>
+<ul>
+<li><strong>8 GB</strong> — livable on the Floor build, with discipline (close the forty tabs).</li>
+<li><strong>16 GB</strong> — the <a href="price-targets.html">sweet spot</a> default. Comfortable for daily AI-plus-life use; worth stretching to if a deal appears.</li>
+<li><strong>32 GB</strong> — the Comfort Zone. Lets you run midsize models with heavier offloading <em>without the machine feeling strangled</em>, and means you'll never think about RAM again for years.</li>
+</ul>
+<h2 id="a-note-on-the-ram-buyers-checklist">A note on the RAM buyer's checklist</h2>
+<p>Three things on a stick of RAM mean something:</p>
+<ul>
+<li><strong>DDR generation.</strong> DDR3 vs DDR4 vs DDR5. Each is physically shaped to <em>not fit</em> in the others' slots. Motherboard and RAM must match. This is the single most common headache in used-parts shopping, because sellers of DDR3-era RAM describe it generously and the generation matters.</li>
+<li><strong>GB.</strong> The number people actually understand. Two 8 GB sticks (16 total) is <em>better</em> than one 16 GB stick — RAM sticks have a feature where working in pairs doubles the speed of data in and out. Buy pairs, always.</li>
+<li><strong>Speed (like 2666, 3200)</strong> — relevant but minor. Match it to your motherboard's supported range; don't pay extra for the top numbers.</li>
+</ul>
+<p>One <strong>free</strong> habit that pays a couple of times over: when you're shopping used RAM, look up the exact model number printed on the sticker. Cheap, boring, uncontroversial. The one surprise that catches too many buyers is buying a stick that says a speed the motherboard doesn't officially support — usually fixable in settings, but easier to just check first.</p>
+<h2 id="the-one-trap-to-avoid">The one trap to avoid</h2>
+<p>Combine everything learned here today into the one purchase you must refuse to make: <strong>a card with plenty of speed but too little VRAM.</strong> We keep making the same joke here because it is genuinely <em>the whole strategy</em> of budget-AI shopping:</p>
+<blockquote>
+<p>The graphics card is a math engine that owns a private, fast, small memory. <strong>Memory decides <em>what you can run</em>. Speed decides <em>how fast you can run it</em>.</strong> Buy memory first.</p>
+</blockquote>
+<p>Wait, that's almost exactly what we said before. That's fine. This entire hobby runs on it.</p>
+<h2 id="a-quick-story-to-make-it-concrete">A quick story to make it concrete</h2>
+<p>Here's the whole chapter as it actually happened to a beginner last month — with details changed but the math real:</p>
+<p>They bought a <a href="price-targets.html">used-parts build on the Floor budget</a> (~$300). 8 GB VRAM card. 16 GB RAM. They loaded a small 7B-class local model to test: it fit entirely in VRAM, and it whizzed — answers in a couple of seconds. They loaded a midsize 13B model out of curiosity: it <em>ran</em>, but with a big chunk offloaded to RAM, so answers took noticeably long and the fan turned up. Not a failure! But it told them exactly what to fix: next upgrade is the card's memory class, not anything else. <strong>The build told them its next step.</strong> That's what this hobby is like when the parts are chosen with memory first.</p>
+<p>Now, <a href="first-boot-checklist.html">build day</a> is closer than you think. Or if you're still shopping, take the <a href="shopping-worksheet.html">worksheet</a>.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only; parameter-count and memory figures are rough, human-scale approximations for orientation, not technical specifications.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

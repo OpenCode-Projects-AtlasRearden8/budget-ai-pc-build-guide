@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ollama Install Day — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html" class="active">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="ollama-install-day">Ollama Install Day</h1>
+<p><em>Downloading the tool, pulling your first model, and the first real conversation with a machine that lives in your house.</em></p>
+<p>Parts are in, system boots, drivers are on. Today is the day you talk to an AI that runs entirely inside your own computer — no subscription, no account, no cloud, working with the Wi-Fi off. This chapter walks through it at walking pace. It uses <strong>Ollama</strong>, the free, open-source program that has quietly become the standard on-ramp for local AI: you type one short command, it downloads a model, and you can start chatting.</p>
+<p>(Honest, non-endorsement note: Ollama is free software and this guide uses it because it's the simplest well-trodden path for beginners. Other good local-AI tools exist, and the <em>concepts</em> here — models, memory, chat — transfer to all of them.)</p>
+<h2 id="what-youre-actually-installing-in-one-paragraph">What you're actually installing, in one paragraph</h2>
+<p>Ollama is a <strong>model runner</strong>: a small program that keeps downloaded models on your drive and handles the messy details of running them (loading into VRAM, keeping the memory tidy, answering). You interact with it in two ways: a <strong>terminal command</strong> (<code>ollama run whatever</code>) and a <strong>local chat window</strong> in your browser at an address like <code>localhost:11434</code>. "Localhost" means <em>your own machine</em> — the browser is just the friendly face it provides.</p>
+<p>Everything it downloads lives in a folder on your machine. Nothing is sent anywhere. Turn off the internet after setup and it keeps working identically. <strong>This is the whole point of the hobby</strong>, and it's worth saying once: after today, your AI works the same at 2 PM on Wi-Fi and 3 AM in a snowstorm.</p>
+<h2 id="installing-ollama">Installing Ollama</h2>
+<p><strong>On Windows or Mac:</strong> visit <code>ollama.com</code>, download the installer for your system, and run it like any normal program. It installs quietly and puts a small icon in your menu or system tray. That's the whole install — under two minutes, a few hundred megabytes.</p>
+<p><strong>On Linux:</strong> one command in a terminal (copied from the same website):</p>
+<pre><code>curl -fsSL https://ollama.com/install.sh | sh
+</code></pre>
+<p>It installs itself and usually starts automatically. If you're Linux-shy, the Windows/Mac installer exists precisely for you; either path ends in the same place.</p>
+<p><strong>Check it works</strong> by opening a terminal (or the Command Prompt on Windows) and typing:</p>
+<pre><code>ollama --version
+</code></pre>
+<p>A number that isn't an error means it's alive. First milestone. Take a sip of coffee.</p>
+<h2 id="pulling-your-first-model">Pulling your first model</h2>
+<p>"Pulling" is the word the community uses for <em>downloading a model</em>. Models live in a searchable catalog on the same site, each with a name like <code>llama3.2</code> or <code>gemma3</code> or <code>qwen3</code> (those are family names, from different makers, all free to run locally).</p>
+<p><strong>For your first pull, choose small.</strong> A small model downloads in minutes, answers fast, and gives you the full experience without asking anything of your hardware. In the terminal:</p>
+<pre><code>ollama run llama3.2:3b
+</code></pre>
+<p>Translation of that line: "please run/download the 3-billion-parameter version of that model family." First time, it downloads (a couple of gigabytes; watch the progress bar), then it drops you into a <strong>chat prompt</strong> — meaning you can just type a sentence and press Enter. You're now talking to an AI that isn't on the internet anywhere.</p>
+<p>Things worth trying for the first ten minutes, friend-to-friend:</p>
+<ul>
+<li>A question you'd have typed into a search engine: <em>"Explain why my kitchen sink gurgles."</em></li>
+<li>A summarization job: paste a paragraph or two, ask for three bullet points.</li>
+<li>A translation or idiomatic-English check.</li>
+<li>And the personality test: <em>"Who are you? Who made you?"</em> — the answer ("I'm a local language model running on Ollama...") is a nice little confirmation that this is <em>yours</em>.</li>
+</ul>
+<p><strong>Type <code>/bye</code> or press <code>Ctrl+D</code> to leave a chat session.</strong> The model stays downloaded; you're just closing the conversation.</p>
+<h2 id="expect-these-three-very-normal-things">Expect these three very normal things</h2>
+<ol>
+<li><strong>Small models are shallow.</strong> They'll answer general questions well and mess up specialized ones, mix up small details, and lose their thread in very long conversations. That's a size class, not a bug — it's what a few billion numbers can and can't hold. (The spreadsheets in the <a href="ram-and-vram.html">RAM/VRAM chapter</a> show what bigger classes do.)</li>
+<li><strong>First answer is slow; the rest are fast.</strong> The model loads into VRAM once — a pause of a few seconds up to a minute — then answers arrive quickly. If <em>every</em> answer feels slow, the model is bigger than your VRAM and offloading (long explanation in the last chapter's trap).</li>
+<li><strong>It forgets everything between sessions.</strong> Close a chat and the next one starts blank. This is normal for the default tool and is one of the genuinely useful properties — nothing you say is accumulating anywhere. Some more advanced setups add a "memory" feature; this guide's simpler philosophy is: <strong>save what you want to keep into your own files</strong>, and treat the chat like a very well-read friend who never gossips because they forget you.</li>
+</ol>
+<h2 id="leveling-up-which-model-to-try-next">Leveling up: which model to try next</h2>
+<p>When the small model feels too shallow, size up <strong>one class at a time</strong>, based on your VRAM (table back in the <a href="ram-and-vram.html">RAM/VRAM chapter</a>):</p>
+<ul>
+<li><strong>8 GB VRAM</strong> — try the ~7–8B class models. Noticeably more capable, still fast.</li>
+<li><strong>12 GB VRAM</strong> — the ~13–14B class starts. This is where local models start feeling genuinely helpful for real work like document summarizing and drafting.</li>
+<li><strong>16 GB+ VRAM</strong> — welcome to the range where local models become proper assistants.</li>
+</ul>
+<p>The command pattern stays identical (<code>ollama run &lt;name&gt;</code>), and the catalog on the website sorts models by size in a beginner-friendly way. One honest rule: <strong>don't run models that clearly out-size your VRAM</strong> "just to see." You'll spend twenty minutes watching a progress bar learn nothing. The right model lives just <em>under</em> your memory ceiling, and that's permanent wisdom for the whole hobby.</p>
+<h2 id="talking-to-it-in-a-nicer-window">Talking to it in a nicer window</h2>
+<p>The terminal works, but most people graduate to a friendlier chat interface in an afternoon. These work through a simple principle: a small program that draws a nicer chat window and talks to Ollama quietly in the background. Search terms that find good ones: <strong>"local LLM chat interface for Ollama."</strong> (Some are free, some ask for a few dollars. All of them keep everything local — that's the point of the ecosystem.)</p>
+<p>One straight-faced note for security-conscious readers: all of this is your machine talking to your machine. Your prompts are processed on your CPU's and graphics card's own silicon, no cloud round-trips, nothing phoning home with your words. If you ever worry about that — and it's a reasonable thing to care about — the simple test is unplugging the internet (or using a firewall tool to block the app) and watching everything keep working. The snowstorm test, it's called, because that's how people <em>actually</em> use these machines.</p>
+<h2 id="the-end-of-day-checklist">The end-of-day checklist</h2>
+<pre><code>[ ] Installed and version-checked (ollama --version answered).
+[ ] Pulled one small model and had a real conversation.
+[ ] Tried summarizing a real document.
+[ ] Time-trialed: noted roughly how long first-answer and later-answer take.
+[ ] Determined (from speed) whether the model fits in VRAM or is offloading —
+    very slow = too big; upgrade path noted for later.
+[ ] Found the model's folder size on disk, just to know where your disk went.
+[ ] (Optional) Installed a nicer chat interface and customized nothing yet.
+[ ] (Optional) Closed the model with /bye and shut down the PC with your
+    hard drive feeling a couple of gigabytes heavier and your brain a
+    couple of IQ points lighter on the &quot;huh, that's possible?&quot; scale.
+</code></pre>
+<p>Tomorrow, you're a person with a local AI. What's left is keeping it healthy: dust, updates, backups, and the five-minute monthly check — which is the <a href="upkeep.html">final chapter</a>.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only. Ollama is free, open-source software by its own authors; this guide is independent of it and not affiliated with any model or tool maker.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

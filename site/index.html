@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Budget AI PC Guide — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html" class="active">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="the-budget-ai-pc-guide">The Budget AI PC Guide</h1>
+<p><em>A friend-level walkthrough for building a used-parts computer that can run local AI, without spending more than you need to.</em></p>
+<p>Welcome. This guide exists because most PC-building advice online assumes you have $2,000, a big desk, and the patience to read through thirty forum tabs. If you want to run AI tools on your own machine — privately, offline, no subscription — you do not need any of that. You need a handful of used parts, a hundred dollars of good sense, and one afternoon.</p>
+<p>This is a <strong>hardware guide</strong>, not a "how to use AI" guide. It covers what the parts are, how much to spend on each, the tradeoffs you'll actually feel (noise, heat, speed), what RAM and VRAM mean in real life, what to do on the first boot, and the honest truth that your old laptop might already be good enough. For using the AI once it's running, see the companion handbook on daily usage — that's a separate project.</p>
+<h2 id="where-to-start">Where to start</h2>
+<p>Start at the top and read in order. The whole thing takes about an hour to read, and every chapter ends knowing exactly what to do next.</p>
+<ol>
+<li><strong><a href="old-laptop-first.html">Try your old laptop first</a></strong> — Seriously. Skip us if you already have 16 GB of RAM and a decent graphics chip.</li>
+<li><strong><a href="parts-explained.html">What each part does</a></strong> — Eight parts, plain English, zero jargon without a translation next to it.</li>
+<li><strong><a href="price-targets.html">How much to spend</a></strong> — Sensible price ceilings for each part, three total budgets, and where not to cheap out.</li>
+<li><strong><a href="silent-vs-speed.html">Quiet or fast?</a></strong> — The noise/heat/performance tradeoff, and how to pick with your ears.</li>
+<li><strong><a href="ram-and-vram.html">RAM and VRAM, explained</a></strong> — Why one number decides which AI models your machine can run, and how big that number should be.</li>
+<li><strong><a href="shopping-worksheet.html">Shopping worksheet</a></strong> — A printable checklist so you don't get talked into RGB lighting.</li>
+<li><strong><a href="first-boot-checklist.html">Build day and first boot</a></strong> — Assembly order, power-on checklist, and the two mistakes everyone makes.</li>
+<li><strong><a href="ollama-install-day.html">Ollama install day</a></strong> — Getting a local AI running on new hardware, step by step.</li>
+<li><strong><a href="upkeep.html">Keeping it healthy</a></strong> — Dust, updates, backups, and the five-minute monthly routine.</li>
+<li><strong><a href="glossary.html">Glossary</a></strong> — Every term this guide uses, defined once, in order.</li>
+</ol>
+<h2 id="the-promises-we-make">The promises we make</h2>
+<ul>
+<li><strong>Plain English.</strong> Every technical term is defined the first time it appears, in words like a friend would use — never condescending.</li>
+<li><strong>Education only.</strong> This guide explains concepts and tradeoffs. It never tells you a specific product is "the one to buy," and it never trains or promotes selling. Prices are discussed as <em>ranges and ceilings</em>, because used markets change weekly.</li>
+<li><strong>Local-first.</strong> Once you build this machine, your AI can run with the internet unplugged. Nothing here requires an account, a subscription, or a cloud.</li>
+<li><strong>Tested.</strong> The website you're reading was generated by a tiny script in this same folder. Build instructions for the <em>site</em> are in the main README of this project.</li>
+</ul>
+<h2 id="what-running-ai-locally-actually-means">What "running AI locally" actually means</h2>
+<p>A quick orientation before the parts talk, because it shapes every dollar you'll spend.</p>
+<p>AI models are big bundles of numbers — think of a very long, very detailed recipe. When you ask a local model a question, your computer reads that recipe over and over, doing a mountain of arithmetic. The two resources that matter are:</p>
+<ul>
+<li><strong>How fast</strong> your machine can do that arithmetic (speed → how quick the answers feel).</li>
+<li><strong>How much of the recipe fits in the computer's fast memory</strong> (capacity → which models can run at all).</li>
+</ul>
+<p>Part one is mostly about the <strong>graphics card</strong>. Part two is about <strong>VRAM</strong> (the graphics card's own fast memory) and <strong>RAM</strong> (the computer's main memory) working together. That's the whole economic story of this hobby: speed and capacity cost money, and:
+- Used equipment sells both at steep discounts.
+- Off-brand cleverness (offloading part of the model to slower memory) can run models that don't quite fit — slowly.</p>
+<p>Everything in this guide is built around buying just enough speed and just enough capacity, second-hand, with a ceiling you set before shopping and refuse to cross.</p>
+<h2 id="a-word-on-expectations">A word on expectations</h2>
+<p>A used-parts budget PC will comfortably run small and midsize AI models — the kind that can answer questions, summarize documents, draft letters, and help with code. It will not run the giant frontier models you read about in the news at full size. That's not a failure; those models need racks of hardware costing a house. A well-chosen budget build is also roughly the class of machine small businesses buy prebuilt for thousands — minus the markup, because <em>you</em> chose every part.</p>
+<p>Set your budget, read the guide, buy slowly, and enjoy the week before your parts arrive. Building it is honestly the fun part.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. This guide is general educational information, not purchase advice or a recommendation of any specific product. Your safety around electronics is your responsibility: unplug things, ground yourself, and when in doubt, ask someone who's done it before.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

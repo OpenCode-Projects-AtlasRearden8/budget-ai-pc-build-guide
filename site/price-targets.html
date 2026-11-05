@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Much to Spend: Price Ceilings and Three Budgets — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html" class="active">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="how-much-to-spend-price-ceilings-and-three-budgets">How Much to Spend: Price Ceilings and Three Budgets</h1>
+<p><em>Sensible ceilings, not listings. Set the number before you shop — then never cross it.</em></p>
+<p>Used markets are emotional places. Prices swing, sellers get creative, and every listing is photographed to look more exciting than it is. The single best defense isn't knowledge of parts (that helps) — it's a <strong>number written down before you open the app</strong>, and the discipline to walk away. This chapter gives you: a ceiling for every part, three example total budgets, the three best money-saving moves in this hobby, and the red flags to refuse politely.</p>
+<p>Prices here are in US dollars, written as <strong>ranges</strong> rather than listings, because local markets change weekly. Adjust in your head for your region. These are ceilings — you'll often beat them.</p>
+<h2 id="the-part-by-part-ceilings">The part-by-part ceilings</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Fair used price</th>
+<th>Absolute ceiling</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>$15–50</td>
+<td><strong>$80</strong></td>
+<td>A used mid-grader does the job. Never the top of a family.</td>
+</tr>
+<tr>
+<td>Motherboard</td>
+<td>$30–60</td>
+<td><strong>$80</strong></td>
+<td>Cheapest bought as a matched pair with the CPU.</td>
+</tr>
+<tr>
+<td>RAM (16 GB pair)</td>
+<td>$20–40</td>
+<td><strong>$50</strong></td>
+<td>Sometimes the best free upgrade: ask around.</td>
+</tr>
+<tr>
+<td>Graphics card</td>
+<td>$80–180</td>
+<td><strong>$250</strong></td>
+<td>The one worth shopping hard for. Target 8–12 GB VRAM.</td>
+</tr>
+<tr>
+<td>SSD (512 GB)</td>
+<td>$25–40</td>
+<td><strong>$60</strong></td>
+<td>256 GB is fine on a pinch; you'll outgrow it.</td>
+</tr>
+<tr>
+<td>Power supply</td>
+<td><strong>buy new</strong>: $40–60</td>
+<td>(new) <strong>$70</strong></td>
+<td>The one used part we suggest you don't buy used.</td>
+</tr>
+<tr>
+<td>Case</td>
+<td>$0–25</td>
+<td><strong>$40</strong></td>
+<td>Frequently free. Always bring this up on local boards last.</td>
+</tr>
+<tr>
+<td>CPU cooler</td>
+<td>$0–20</td>
+<td><strong>$25</strong></td>
+<td>Free if the CPU came with one.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parts total: about $210 to $565, before negotiation.</strong> Add tax/fees and possibly one replacement cable, and call it $250–600 for reality. Now, three ways people commonly skip the low end:</p>
+<h2 id="three-total-budgets-three-different-lives">Three total budgets, three different lives</h2>
+<h3 id="budget-one-the-floor-300-it-runs">Budget one: The Floor (~$300) — "It runs"</h3>
+<p>Floor builds are for proof-of-concept: <em>learning the workflow, running small models, having a real desktop</em>.</p>
+<ul>
+<li>A used 8 GB VRAM graphics card toward the low end</li>
+<li>Used matched CPU + motherboard pair, mid-cycle family</li>
+<li>16 GB RAM, 512 GB SSD, new PSU, cheap or free case</li>
+</ul>
+<p>You get: a real computer, silent when idle, that runs small local models with room to spare in normal use, plays regular desktop workloads with no drama, and teaches you more about computers than any article could.</p>
+<h3 id="budget-two-the-sweet-spot-450500-comfortable-daily-driver">Budget two: The Sweet Spot (~$450–500) — "Comfortable daily driver"</h3>
+<p>This is what most people should aim for, and the honest recommendation of this whole guide.</p>
+<ul>
+<li>A used <strong>10–12 GB VRAM</strong> graphics card</li>
+<li>Used CPU/motherboard pair with a bit more headroom</li>
+<li>16 GB RAM (maybe 32 if a good deal appears), 512 GB+ SSD, new PSU, decent case with two fans</li>
+</ul>
+<p>You get: everything above, plus enough memory headroom to run <strong>midsize local models</strong> comfortably — the ones that feel like they can actually hold a thought — with a browser and a document open at the same time. This is the build that stays useful for years, not months.</p>
+<h3 id="budget-three-the-comfort-zone-700800-serious-but-idiosyncratic">Budget three: The Comfort Zone (~$700–800) — "Serious but idiosyncratic"</h3>
+<p>At this level you're into genuinely large-capacity cards (16 GB VRAM class on the used market) and 32 GB of RAM. This is the ceiling where the advice generically stops being good — <strong>beyond $800, buying new becomes more sensible than buying used</strong>, and this guide just politely points you at mainstream new-build advice, which is everywhere.</p>
+<h2 id="the-three-money-saving-moves-that-actually-work">The three money-saving moves that actually work</h2>
+<p><strong>1. Buy CPU + motherboard as a pair.</strong> Sellers upgrading their CPU often list the old pair together — at a discount to just the CPU alone. You skip matching part research entirely and likely end up with working RAM thrown in. First place to look.</p>
+<p><strong>2. Cases, RAM, and HDDs are all <em>take-it-free</em> parts.</strong> People who upgraded for aesthetics and speed regularly give away perfectly good black boxes and old RAM sticks. Post a friendly ask on your local give-and-take board and you will probably be invaded with offers. (HDDs you shouldn't use as your main drive — but as a spare archive drive, free is free.)</p>
+<p><strong>3. Shop the boring generation.</strong> Cards sold for workstations and professional work two or three generations ago are memory-rich, cool-running, unloved by gamers, and therefore cheap. This is the single most reliable value pocket in used hardware, and knowing it exists is most of the battle.</p>
+<h2 id="where-the-money-should-disproportionately-go">Where the money should <em>disproportionately</em> go</h2>
+<p>If the graphics card is between two options on your budget, and the question is whether a slightly faster high-memory card is worth stretching for over the CPU, the answer is: <strong>always the card with more memory.</strong> Speed differences between adjacent generations are learnable-around; memory limits simply refuse to run the model at all. You can always wait longer for an answer; you can't run a model that doesn't fit.</p>
+<p>The corollary is a wonderful liberty for everything else: <strong>you can be stingy on the CPU</strong> because modest CPUs last a long time for desktop work. Frugality is allowed everywhere except one place.</p>
+<h2 id="red-flags-politely-refuse-these-listings">Red flags: politely refuse these listings</h2>
+<p>The following are the reasons used sellers' photos blur:</p>
+<ul>
+<li><strong>"Mining card"</strong> — This removes the card's time as a rig used 24/7 at 100% load from its life's story, and pricing should reflect a <em>steep</em> discount or simply "pass." The seller disclosing it is honorable; the rig's hours are still its hours.</li>
+<li><strong>Photos from the internet instead of the object itself</strong> — instant pass.</li>
+<li><strong>"Overclocked" listed as a feature</strong> — wear and tuning; pass unless it's priced accordingly.</li>
+<li><strong>Graphics cards with no cooler or visibly damaged plugs</strong> — never. (Also: ask the seller to power-test a card before you drive out. Any honest owner will; any refusal is your answer.)</li>
+<li><strong>A PSU with no brand name anywhere on the sticker</strong> — never, at any price, even free.</li>
+<li><strong>Anything described as "for parts or repair"</strong> unless the price is allowance-money and you enjoy puzzles.</li>
+</ul>
+<h2 id="the-ceiling-discipline">The ceiling discipline</h2>
+<p>One practice, worth the whole chapter: <strong>write your number down before you shop, and give yourself a one-hour-per-shopping-session memory limit.</strong> Used-market shopping rewards patience so well that a ceiling <em>plus</em> a calendar beats cleverness: post your wants, wait two weeks, let negotiation and boredom do their free work. Nearly every overpay in this hobby is a boredom or impatience purchase, and that little hourglass is your cheapest insurance.</p>
+<p>Now you know the money. Next: <a href="silent-vs-speed.html">the noise</a> — the part of a PC spec sheet nobody shows you.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only: prices are general ranges for orienting your expectations, not current-market quotes or recommendations of any specific product. Your ceiling is your ceiling — never spend money you'd miss.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

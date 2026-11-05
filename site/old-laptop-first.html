@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try Your Old Laptop First — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html" class="active">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="try-your-old-laptop-first">Try Your Old Laptop First</h1>
+<p><em>The most expensive PC you can buy is one you don't actually need. Here's how to find out — for free — before you spend a dime.</em></p>
+<p>Here's the advice nobody selling you hardware wants to give: <strong>before you budget a single dollar, spend one evening testing what you already own.</strong> A surprising number of people who "need a new PC for AI" already own a machine that runs small local models perfectly well for the things they actually do — and finding that out costs nothing but a download.</p>
+<p>This chapter is short on purpose. If the old laptop wins, you've saved yourself several hundred dollars and a weekend. If it loses, you'll have concrete numbers to shop with, which makes every later chapter in this guide easier.</p>
+<h2 id="the-two-minute-honest-check">The two-minute honest check</h2>
+<p>You need two facts about your current machine. No jargon required, we'll walk it through.</p>
+<h3 id="fact-1-how-much-ram-do-you-have">Fact 1: How much RAM do you have?</h3>
+<p>RAM is your computer's working memory — the space it uses while doing things. On <strong>Windows</strong>: press <code>Ctrl+Shift+Esc</code> to open Task Manager, look at the Performance tab, and find "Memory." On <strong>macOS</strong>: click the Apple menu, choose "About This Mac," and read the "Memory" line. On <strong>Linux</strong>: open a terminal and type <code>free -h</code>, reading the "total" line.</p>
+<ul>
+<li><strong>4 GB or less</strong> — Your laptop is running on fumes even for everyday tasks. Keep reading this guide; a build will genuinely help.</li>
+<li><strong>8 GB</strong> — Borderline. Small local AI models can run, but you should close everything else. Also fine to keep reading.</li>
+<li><strong>16 GB or more</strong> — Interesting! Write that down. You may already have a usable machine.</li>
+</ul>
+<h3 id="fact-2-what-graphics-capability-do-you-have">Fact 2: What graphics capability do you have?</h3>
+<p>The key question is whether you have a <strong>dedicated graphics card with its own memory (VRAM)</strong> — the thing that makes local AI fast — or just the basic graphics built into your computer's main chip. On Task Manager's Performance tab (Windows), look for two different entries: "GPU 0" and possibly "GPU 1" or a listing with a large "Dedicated GPU memory" number. On macOS, the About This Mac window shows the graphics chip name; any Apple-silicon Mac counts as a generally capable machine for its class. On Linux, run <code>lspci | grep -i vga</code> and see whether anything beyond the default paperwork name appears.</p>
+<ul>
+<li><strong>Dedicated graphics with 6 GB of VRAM or more</strong> — Stop here first. Install a local AI tool (see the <a href="ollama-install-day.html">Ollama chapter</a> for the step-by-step) and just try it.</li>
+<li><strong>Any Apple-silicon Mac (M1, M2, etc.) with 16 GB unified memory</strong> — Also stop. These machines run small models surprisingly well; the memory is shared between "graphics" and "general" duty, which is fine for AI work.</li>
+<li><strong>Built-in graphics only, 8 GB RAM</strong> — You're in "it will run, slowly" territory. Try a very small model with everything else closed. If it feels like watching paint dry, that's your answer too.</li>
+</ul>
+<h2 id="the-free-experiment">The free experiment</h2>
+<p>If either check came back "interesting," do this before shopping:</p>
+<ol>
+<li><strong>Back up anything you care about.</strong> Standard advice, applies to every computer, laptop or new. One USB drive is enough.</li>
+<li><strong>Install a local AI tool the easy way.</strong> The <a href="ollama-install-day.html">Ollama install day chapter</a> walks through this for real computers, and the same process works on a laptop — the steps are nearly identical.</li>
+<li><strong>Load the smallest model offered.</strong> Small models are a few gigabytes and are genuinely useful for everyday questions, summarizing, and drafting.</li>
+<li><strong>Use it for a real evening of real work.</strong> Not a benchmark — actual tasks. Draft an email. Summarize a document you needed to read anyway. Ask the questions you'd normally type into a search bar.</li>
+</ol>
+<p>Then judge it like a human, not a reviewer:</p>
+<ul>
+<li>Was it fast enough that you <em>forgot</em> it was slow? (This is the magic threshold. "Annoyingly slow" is different from "imperceptibly slow.")</li>
+<li>Did it ever say it "ran out of memory" or refuse a slightly bigger task?</li>
+<li>Did your browser survive at the same time, or did everything grind?</li>
+</ul>
+<p>If the answers are: forgot it was slow, never ran out, and the machine lived — <strong>stop shopping.</strong> Buy yourself a nice keyboard instead. That money is now free for something that isn't a computer.</p>
+<h2 id="when-the-laptop-genuinely-loses">When the laptop genuinely loses</h2>
+<p>It will lose if you find yourself wanting any of these:</p>
+<ul>
+<li><strong>Bigger, smarter models.</strong> If the small models keep giving answers that miss the point, a machine with more VRAM lets you run better ones.</li>
+<li><strong>Always-summarizing big documents.</strong> Feeding it a 60-page PDF and getting useful output back needs memory in a way laptops rarely have.</li>
+<li><strong>Doing it all day without noise complaints.</strong> Laptop fans scream under AI load. A desktop with the right (see: <a href="silent-vs-speed.html">quiet</a>) parts hums.</li>
+<li><strong>A real desktop setup</strong> — you're sitting at the same desk most of the time anyway, and the cyclone of heat from an overworked laptop on a duvet is not a lifestyle.</li>
+</ul>
+<p>If any of those sound like you, congratulations: you now know <strong>why</strong> you're building, which is exactly what the next chapter assumes you know. Write down one sentence like <em>"My laptop can't summarize big documents and the fan is a jet engine"</em> — that's the true north for every purchase you're about to make.</p>
+<h2 id="one-more-honest-point-the-laptop-is-still-worth-keeping">One more honest point: the laptop is still worth keeping</h2>
+<p>Even in the worst case, that laptop is not dead. It becomes:</p>
+<ul>
+<li><strong>A quiet companion screen</strong> for looking up parts lists while your PC is in pieces on the floor.</li>
+<li><strong>The machine you install Ollama on today anyway</strong>, so you learn the tool while your parts are in the mail.</li>
+<li><strong>A backup.</strong> Computer parts fail eventually, even new ones. Having any working computer means a failed part is an inconvenience, not a crisis.</li>
+</ul>
+<p>Test it. Time it. Take notes. And only then open your wallet — with a number in mind, which is where <a href="parts-explained.html">the next chapter</a> begins.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only. Your machines are your responsibility — back up before any experiment, laptop or otherwise.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

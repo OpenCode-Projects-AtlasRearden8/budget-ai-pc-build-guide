@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Day and First Boot — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html" class="active">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="build-day-and-first-boot">Build Day and First Boot</h1>
+<p><em>The order to assemble in, the checklist to run before and after you press power — and the two mistakes everyone makes exactly once.</em></p>
+<p>The parts are here. The desk is cleared. Today you turn a pile of boxes into a working computer — and an hour after that, into a machine that runs AI with the internet unplugged. This chapter is a walking-pace checklist, not a lecture: the assembly order people actually use, the checks that catch 95% of first-boot problems, and the two famous mistakes every builder makes once.</p>
+<h2 id="ground-rules-first-five-minutes-genuinely-important">Ground rules first (five minutes, genuinely important)</h2>
+<ul>
+<li><strong>Unplug everything before touching inside-parts.</strong> No exceptions, ever, mid-build. Power off ≠ unplug; do both.</li>
+<li><strong>Ground yourself.</strong> Touching bare case metal (or a doorknob or radiator) occasionally during the build bleeds off static electricity, which can invisibly damage chips. A $10 anti-static wrist strap works too if you like gadgets. Static damage is rare, but it's the one preventable cause of "the part arrived fine and doesn't work."</li>
+<li><strong>Keep screws in their bags / a magnetic dish.</strong> Loose screws lost in the case are the single most common "why is it making that sound," and a screw bridging two components is how circuits fail.</li>
+<li><strong>Clear pets and small kids from the room.</strong> This is a one-time instruction, not an ongoing drama. A screwdriver tray and a closed door do the job.</li>
+<li><strong>The parts arrive in boxes — the <em>right</em> parts arrive in boxes.</strong> Open, count, compare against your worksheet, photograph anything that looks damaged. If something's wrong, the day to find out is before assembly, not after.</li>
+</ul>
+<h2 id="the-assembly-order-people-actually-use">The assembly order people actually use</h2>
+<p>Most people build in an order like this, because parts tolerate being <em>handled</em> much better than being <em>installed twice</em>. Read through fully before starting; it's a one-pass job for each part.</p>
+<pre><code>1.  Put the motherboard on its cardboard box, on a clear table. NOT in the case yet.
+2.  Open the CPU socket (a small latch+arm, usually labeled). Match the
+    corner-arrow triangle on the CPU to the one on the socket. It drops in
+    with ZERO FORCE — if you are pressing, it's misaligned. Close the latch.
+3.  Seat RAM into the slots: push firmly, straight down, until both end
+    clips click. (If your board has 4 and you have 2 sticks, see the tip below.)
+4.  Attach the CPU cooler on top of the CPU with a small blob of thermal
+    paste (pea-sized dot in the middle — it spreads itself). Plug the
+    cooler fan's little cable into the header labeled &quot;CPU_FAN.&quot;
+5.  NOW put the motherboard into the case, screwed down through the standoffs.
+6.  Install the power supply, fan facing down or the room-facing direction
+    per the case's airflow design, then screw it in at the back panel.
+7.  Install the graphics card into its long slot on the motherboard,
+    snap it down, connect its power plug(s) from the PSU (there will be
+    a plug or two hanging near it).
+8.  Screw the SSD into the SSD bay, connect a SATA data cable to it and the
+    motherboard, and a SATA power cable from the PSU. (If your drive is NVMe,
+    it goes into a small M.2 slot on the motherboard instead — plug straight
+    down, screw in the tiny hold-down screw.)
+9.  Connect the case's front panel: the little cluster of wires (power button,
+    USB ports, headphone jack). Each wire attaches to small pins on the
+    motherboard's edge. There's usually a tiny printed guide by them or in
+    the board's manual. The power-button pair is the only critical one;
+    the USB and audio plugs only fit the one correct way.
+10. Case fans: plug into &quot;SYS_FAN&quot; or &quot;CHA_FAN&quot; headers on the motherboard,
+    or (some cases) directly into molex/sata power from the PSU.
+</code></pre>
+<p><strong>RAM slot tip:</strong> check the board manual for which slots are "channel A" — paired sticks usually go in slots 2 and 4 (counting from the CPU end). All boards color-code or label the correct pairing; the manual confirms in ten seconds.</p>
+<p><strong>Take breaks.</strong> Nobody builds a computer in one flawless session, and most errors happen in the tired last twenty minutes. Walk to the kitchen and come back twice during the day.</p>
+<h2 id="the-two-famous-mistakes-everyone-makes-once">The two famous mistakes everyone makes once</h2>
+<ol>
+<li><strong>Motherboard standoffs.</strong> In every case there are small brass or plastic towers screwing into the case floor. Your motherboard sits ON TOP of those and gets screwed to them. If a standoff sits in the wrong position, it can be touching the back of the board (short circuits and mysterious power-offs), or — the famous one — a standoff is <em>missing</em> under part of the board, so the board flexes, and something quietly doesn't make contact. The check: <strong>the motherboard has a specific number of screw holes; every one should have a standoff underneath it, and no spares touching anything.</strong> Two minutes with a torch, and you've skipped the classic.</li>
+<li><strong>The power-button front-panel wires.</strong> The tangle of tiny single-pin connectors is intimidating, and plugging them blind means the button does nothing. The fix lives in the motherboard's mini-manual (or a legend printed right beside the pins on some boards). Match the wire labeled something like <code>PWR_BTN</code> to the matching pin pair — and if the machine powers on when <em>unplugged-and-replugged</em> fails to respond, flipping the wire pair around is the classic fix. This is annoying, never dangerous, and fixable. Read once, do once, forever learned.</li>
+</ol>
+<h2 id="the-power-on-checklist">The power-on checklist</h2>
+<p>Do this <em>before</em> pressing power, and then again after. It catches nearly all first-boot failures.</p>
+<p><strong>Before pressing power:</strong></p>
+<pre><code>[ ] Every cable is plugged into BOTH ends (PSU→motherboard 24-pin, PSU→CPU
+    8-pin [the one nearest the CPU — this is the single forgotten one,
+    costing first-boot confusion more than anything]),
+    PSU→graphics card power plugs, PSU→SSD, PSU→extra drives.
+[ ] RAM clips are fully snapped on both ends.
+[ ] No loose screws visibly rolling in the case (flip the case gently
+    and listen).
+[ ] CPU cooler is physically attached (never powered-on-bare-CPU).
+[ ] The case's PC-standoffs are correct and only at board-hole positions.
+[ ] Monitor cable is plugged into the GRAPHICS CARD's port, not the
+    motherboard's. (The most common &quot;black screen&quot; of all time.)
+[ ] Keyboard/mouse plugged into the direct USB ports on the case (the others
+    connect late in setup).
+</code></pre>
+<p><strong>Press power.</strong> One press. Watch, listen.</p>
+<p><strong>It lights up and shows a screen:</strong> beautiful. You may hear a single beep on some boards; that's a happy noise. Continue to setup below.</p>
+<p><strong>It lights up, but shows no screen or no beep, and fans spin:</strong> switch power off at the back of the PSU, wait, then check the standard three: RAM fully seated (re-seat both), graphics card seated, CPU-8-pin plugged in. Then press power again. Being seated properly <em>does</em> take 80% of first-boot no-screen fixes; don't skip to exotic explanations.</p>
+<p><strong>Nothing lights at all, no fans:</strong> power strip on? Wall works? PSU's back-facing switch set on? The 24-pin on the motherboard fully clicked in? All those are the standard, and they resolve nearly all "it did not begin."</p>
+<h2 id="on-the-first-real-boot">On the first real boot</h2>
+<ul>
+<li><strong>Choose an operating system.</strong> Whatever you already know is the right answer. (Both Linux and Windows run local AI tools; the Ollama chapter covers both install paths.) A spare USB drive and a free hour gets the OS in.</li>
+<li><strong>Install the graphics driver.</strong> This matters more than any other single software step — the graphics card below needs its driver to reach full speed.</li>
+<li><strong>Update the OS.</strong> Patches make the next part faster and safer.</li>
+</ul>
+<p>Then one quiet last checklist, before the fun:</p>
+<pre><code>[ ] System recognizes all RAM (check the OS's system info against your sticks).
+[ ] All drives show up at the size you bought.
+[ ] Fans spin when the machine works, and stop (or nearly stop) at idle.
+    ← If they never stop, reread the silent-vs-speed chapter's fan-curve
+    tip — this is a free 20-minute fix.
+[ ] Machine is audible-idle: a gentle hum, not a whine. This is the sound
+    you'll live with for years; fixing it now costs nothing.
+</code></pre>
+<p>One last honest word on the CPU 8-pin cable: two <em>similar</em> 8-pin plugs hang near the CPU on many power supplies — one for the CPU (labeled something like "EPS") and ones for graphics cards (labeled something like "PCI-E"). They're shaped differently to help you, but the difference is subtle at beginner speed, and plugging the wrong one means the CPU never gets power — a mystery no-screen with fans sometimes still spinning. Read the tiny labels printed on the cables. Ten seconds; saves an evening.</p>
+<h2 id="celebrate-then-do-the-smart-last-thing">Celebrate, then do the smart last thing</h2>
+<p>You built a computer. Like, with your hands. Tell someone — genuinely, that's worth all the work in a phrase your grandma would love.</p>
+<p>Then the smart last step before celebrating further: <strong>install the local AI tool and let a model load.</strong> That's the <a href="ollama-install-day.html">Ollama install day chapter</a> — a walking-pace chain too, with honest notes on what to expect, plus a checklist at the end for wrapping up your first day as an <a href="upkeep.html">AI-machine owner</a>.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only. Unplug, ground, and never force-fit anything: those three rules prevent every beginner injury to parts and pride.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

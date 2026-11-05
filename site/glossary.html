@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html" class="active">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="glossary">Glossary</h1>
+<p><em>Every term this guide uses, defined once, in the order a beginner meets it. Skim it before shopping; return to it when a listing talks like a robot.</em></p>
+<p>Plain-English definitions, with a pointer to the chapter that explains each properly.</p>
+<h2 id="the-number-and-letter-soup">The number and letter soup</h2>
+<ul>
+<li><strong>GB / gigabyte</strong> — Unit of digital stuff. One gigabyte holds roughly a couple hundred photos, or about one small AI model. RAM and storage sizes are counted in these. See <a href="ram-and-vram.html">RAM and VRAM</a>.</li>
+<li><strong>GB of VRAM</strong> — The <em>graphics card's</em> private memory, counted separately from the computer's RAM. The number that decides which AI models can run. The central number of this entire guide.</li>
+<li><strong>B, as in "7B," "13B"</strong> — "Billion parameters." Models are named by how many numbers they contain; bigger numbers usually mean smarter and hungrier. A "few billion" = small-class model; "13B" = classic midsize; "70B" = big, needs a house of VRAM.</li>
+<li><strong>GHz, like "3.2 GHz"</strong> — CPU speed label, roughly "how many small instructions per second." Useful for <em>comparing CPUs nearby in age/family</em>, not much else. Never choose CPU by GHz alone.</li>
+<li><strong>W / watts</strong> — Unit of power draw. CPUs and graphics cards have a "watts" rating; your <strong>power supply</strong> must comfortably exceed the total of everything inside (450–650 W covered in <a href="price-targets.html">price targets</a>).</li>
+</ul>
+<h2 id="the-parts">The parts</h2>
+<ul>
+<li><strong>CPU (central processing unit)</strong> — The computer's general-purpose manager-chip. Runs the OS, browser, and everything except heavy math. In a budget AI build: buy modest, spend elsewhere. <a href="parts-explained.html">Parts chapter</a>.</li>
+<li><strong>GPU / graphics card / video card</strong> — The parallel-math engine. Runs game pictures <em>and</em> AI models. <strong>In AI builds it's the thinking engine</strong>, the part to spend on, and its memory is the size that matters.</li>
+<li><strong>Motherboard / mainboard / "mobo"</strong> — The big board everything connects to. Decides which CPUs, RAM generation, and slots you can use. <strong>Match socket to CPU and DDR generation to RAM</strong>, or buy it as a pair with the CPU and skip the guessing.</li>
+<li><strong>RAM (random access memory)</strong> — The computer's working memory / workbench. Empties when powered off. <strong>16–32 GB is the budget sweet spot.</strong> Buy sticks in <em>matched pairs</em>.</li>
+<li><strong>VRAM (video RAM)</strong> — The graphics card's own fast memory (a "private pot" separate from RAM). The model runs <em>in</em> it. <strong>This, not gaming speed, is what you're buying.</strong></li>
+<li><strong>SSD (solid-state drive)</strong> — Silent, fast storage with no moving parts. The correct main drive. 512 GB is the realistic budget target.</li>
+<li><strong>HDD (hard disk drive)</strong> — Older spinning-disk storage: cheap, noisy, slow. Fine as a <em>second</em> archive drive; do not use as a main drive. (Frequently free on give-away boards.)</li>
+<li><strong>PSU (power supply unit)</strong> — Converts wall power to the low-voltage food parts eat. <strong>The one used part this guide recommends buying new.</strong></li>
+<li><strong>Case / tower / chassis</strong> — The metal box. Standard "mid-tower" fits everything. <strong>Most of the machine's <em>noise</em> lives here.</strong></li>
+<li><strong>CPU cooler</strong> — The small fan and metal fin block that sits directly on the CPU. Frequently included free with a used CPU.</li>
+<li><strong>Case fans</strong> — Small fans mounted in the case that push air through. <strong>120+ mm "PWM" fans are the quiet pick.</strong> <a href="silent-vs-speed.html">Silent vs speed</a>.</li>
+</ul>
+<h2 id="ai-and-local-ai-terms">AI and local-AI terms</h2>
+<ul>
+<li><strong>Model / LLM / language model</strong> — The "AI" itself: a giant table of numbers that, when run, produces text. Called LLM when it processes language. See <a href="index.html">what running one means</a>.</li>
+<li><strong>Ollama</strong> — Free, open-source software that downloads models and runs them on your machine with one command. The standard entry point, used in <a href="ollama-install-day.html">Ollama install day</a>. Unaffiliated with this guide.</li>
+<li><strong>Model family (llama, gemma, qwen, mistral, etc.)</strong> — The name of the <em>maker's</em> recipe; different families have different personalities. Try more than one; they're free.</li>
+<li><strong>Parameter</strong> — One number inside a model. Models have billions. "7B" = about 7 billion parameters.</li>
+<li><strong>Pull / download a model</strong> — Fetch the model's numbers to your drive. <code>ollama run &lt;name&gt;</code> does it automatically the first time.</li>
+<li><strong>Offloading</strong> — When a model doesn't fit in VRAM, part of it lives in regular RAM instead. <strong>The model still runs — slowly.</strong> Why memory-first buying matters.</li>
+<li><strong>Trained / weights</strong> — "Trained" = the long, expensive process that <em>made</em> the model somewhere else. "Weights" = the resulting numbers you download. You never train anything on a budget build; you <em>run</em> models people already trained. (This is good news: it's the cheap half.)</li>
+<li><strong>Context window</strong> — How much of the conversation (or document) the model can "see" at once, measured in tokens. Bigger classes of models usually have bigger windows; small models get small windows.</li>
+<li><strong>Token</strong> — Roughly "a piece of a word" — how models measure text. "4096-token context" = about 3,000 words of visible memory.</li>
+<li><strong>Inference</strong> — The act of <em>running</em> a model to get an answer (as opposed to training). Your entire hobby is inference.</li>
+<li><strong>Local / local-first</strong> — Running entirely on your own machine, no internet required after setup, no data leaving the house. <strong>The point of this guide.</strong></li>
+</ul>
+<h2 id="builders-jargon">Builder's jargon</h2>
+<ul>
+<li><strong>Socket</strong> — The physical connector shape the CPU drops into. <strong>CPU and motherboard must match.</strong> Or buy both from one seller.</li>
+<li><strong>DDR3 / DDR4 / DDR5</strong> — RAM's physical generation, each shaped differently. <strong>Motherboard and RAM must match.</strong> The most common used-shopping headache, fixed by one sticker photo.</li>
+<li><strong>SATA / NVMe / M.2</strong> — Two ways an SSD connects. SATA uses a cable; NVMe plugs into a small motherboard slot (M.2). Both fine; NVMe is faster.</li>
+<li><strong>80 Plus</strong> — A sticker meaning the power supply doesn't waste much power as heat. Any color level is fine for health; the <em>brand</em> matters more.</li>
+<li><strong>PWM (fans)</strong> — Fans that can be <em>dynamically slowed down</em> by the motherboard. The quiet option, and standard on decent recent fans.</li>
+<li><strong>Thermal paste</strong> — The paste (pea-sized dot) between CPU and cooler that transfers heat. Included with coolers; applied once, lasts years.</li>
+<li><strong>Standoff</strong> — The small brass tower a motherboard sits on, above the case floor. <strong>Every motherboard hole should have one; no extras touching anywhere.</strong> The classic first-build mistake.</li>
+<li><strong>24-pin / 8-pin (EPS, PCI-E)</strong> — The main power cables. 24-pin to the motherboard, the "EPS" 8-pin to the CPU (the forgotten one), "PCI-E" cables to the graphics card.</li>
+<li><strong>BIOS / UEFI</strong> — The settings screen before your OS loads, where fan curves and boot order live. Reached by mashing Delete or F2 while booting. Don't change what you don't understand.</li>
+<li><strong>Thermal throttling</strong> — The machine automatically slowing parts down when they overheat. Not a fault: a safety feature. If your machine does it constantly, your <em>cooling</em> is the <a href="silent-vs-speed.html">noise-vs-speed</a> lesson you skipped.</li>
+<li><strong>PSU sticker / "for parts or repair" / mining card</strong> — Three listing red flags covered in the <a href="shopping-worksheet.html">shopping worksheet</a>.</li>
+</ul>
+<h2 id="version-of-the-golden-rule">Version of the golden rule</h2>
+<blockquote>
+<p><strong>VRAM decides what can run. Everything else decides how comfortably.</strong></p>
+</blockquote>
+<p>When in doubt all the way through this guide, return to that sentence — it resolves almost every shopping decision you'll face.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only — definitions in plain English for free readers, no endorsement of any specific product.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

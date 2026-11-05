@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Shopping Worksheet — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html" class="active">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="the-shopping-worksheet">The Shopping Worksheet</h1>
+<p><em>A one-page checklist to fill in before, during, and after you shop. Print it, screenshot it, tape it to the fridge — whatever keeps it in front of you when a listing is winning the argument.</em></p>
+<p>Shopping on the used market is an emotional sport, and you're shopping against people who do it every day. This page keeps you on the side of good sense: it's built around the <a href="price-targets.html">price ceilings</a> and the rule from <a href="ram-and-vram.html">RAM and VRAM</a> — <strong>memory before speed</strong> — and it's designed so that, when you're done shopping, you know you bought a <em>system</em>, not a pile of parts.</p>
+<h2 id="step-1-before-you-open-any-listing">Step 1: Before you open any listing</h2>
+<p>Fill these in first, before marketplaces can talk you into anything:</p>
+<pre><code>MY ONE-SENTENCE GOAL (from old-laptop-first.md):
+&quot;I'm building because my current machine can't ______________ and ______________.&quot;
+Example: &quot;can't summarize big documents quietly&quot; or &quot;can't run midsize models.&quot;
+
+MY TOTAL BUDGET CEILING:  $ ___________________
+   Sweet-spot starting point: $450–500, per the price-targets chapter.
+
+MY NON-NEGOTIABLES (circle all that apply):
+   - Quiet enough to sit beside all day
+   - Runs midsize models (12 GB VRAM class)
+   - Room to upgrade later (board with free RAM slots)
+   - Fits under a desk (mid-tower case)
+</code></pre>
+<p><strong>Rule of the day, repeated once more:</strong> your ceiling is your ceiling. A deal that requires breaking your ceiling is not a deal. It's more machine than you said you needed.</p>
+<h2 id="step-2-the-part-by-part-checklist">Step 2: The part-by-part checklist</h2>
+<p>Copy this block for each part, tick as you shop. (The ceiling column comes from the <a href="price-targets.html">price chapter</a>.)</p>
+<pre><code>[ ] CPU — ceiling $80
+      Cores 4+ | Current-generation-ish family, mid-grade | ___$ asking
+
+[ ] Motherboard — ceiling $80
+      Same socket as CPU | DDR3/DDR4 generation matches RAM plan |
+      2+ RAM slots | Ethernet port | ___$ asking
+      ★ BEST BUY: CPU + motherboard listed together (ask the seller!)
+
+[ ] RAM — ceiling $50 (16 GB pair)
+      Pair of two identical sticks | DDR generation matches motherboard | ___$ asking
+
+[ ] Graphics card — ceiling $250
+      VRAM first: 8–12 GB target | NOT a mining rig graduate |
+      Seller agrees to a power-on test | ___$ asking
+
+[ ] SSD — ceiling $60
+      512 GB target | SSD (not HDD) as main drive | ___$ asking
+
+[ ] Power supply — buy NEW, $40–70
+      Reputable brand | 450–650 W | &quot;80 Plus&quot; sticker present | ___$ asking
+      ✓ The one part in this guide we beg you not to buy used.
+
+[ ] Case — ceiling $40 (often free)
+      Mid-tower | At least one included fan (2 is better) |
+      Front USB ports | Ask on local give-away boards | ___$ asking
+
+[ ] CPU cooler — ceiling $25
+      Included with CPU? If yes: FREE, done. If no: inexpensive basic or
+      used tower cooler | ___$ asking
+</code></pre>
+<h2 id="step-3-the-listing-red-flag-check-30-seconds-each">Step 3: The listing-red-flag check (30 seconds each)</h2>
+<p>Before you message anyone about a listing, scan for these. Any single strike is a polite pass:</p>
+<pre><code>STRIKES AGAINST (run through every listing):
+  [ ] Stock photos (not the seller's own pictures of the actual item)
+  [ ] &quot;Mining hive&quot; history on a graphics card
+  [ ] &quot;Overclocked&quot; listed as though it were a feature
+  [ ] No brand name anywhere on the power supply's sticker
+  [ ] &quot;For parts or repair&quot; (unless you like puzzles and it's cheap)
+  [ ] Seller refuses to do a power-on test before pickup
+  [ ] Photos blurred exactly where the connector or label is
+  [ ] Price seems too good — rerun the checklist to find what's missing
+</code></pre>
+<h2 id="step-4-the-five-questions-to-ask-any-seller">Step 4: The five questions to ask any seller</h2>
+<p>Copy-paste friendly. Sellers expect these; good ones answer fast.</p>
+<pre><code>1. Is it still available?
+2. Can you show a photo of it plugged in and powered on, with today's date visible?
+3. (Graphics card) What was it used in, roughly how long, any ownership history you can share?
+4. (RAM/board) Can you confirm the exact model / DDR generation printed on the sticker?
+5. Would $X work?  ← fill X below the asking, never above. A polite, specific number.
+</code></pre>
+<p><strong>That last one is honest negotiation, not a trick.</strong> On used marketplaces, <em>most</em> listings are invented to leave room. Lowball respectfully and you usually interview the seller's patience for free.</p>
+<h2 id="step-5-when-to-stop-and-accept-youre-done">Step 5: When to stop and accept you're done</h2>
+<p>You've done enough shopping when <strong>every</strong> box in Step 2 has a filled-in sitting-in-your-notes price, the math of all your ___$ asking values fits under your Step 1 ceiling <strong>with the power supply bought new</strong>, and your machine's noise plan is a quiet one. Then stop. Stop shopping and walk into the <a href="first-boot-checklist.html">build-day chapter</a>, which is where the real fun of this whole project begins anyway.</p>
+<p>One last honest tip learned from every frugal builder ever: <strong>make a small shopping calendar.</strong> Two weeks is the magic number for used-market patience. Post your asks on day 1, reply to answers through day 3, buy by day 7. Every good deal in this chapter comes from those two weeks. The rest of your shopping life will thank you.</p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only. This worksheet is a checklist for <em>your</em> shopping, not a sighting guide — local markets vary.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>

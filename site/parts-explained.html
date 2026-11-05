@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Each Part Does — The Budget AI PC Guide</title>
+<meta name="description" content="Run local AI on a used-parts PC — plain English, budget ceilings, no hype.">
+<style>
+:root {
+  --ink: #1f2328;
+  --muted: #59616b;
+  --line: #d8dee6;
+  --bg: #fbf9f4;
+  --card: #ffffff;
+  --accent: #2a6f6f;
+  --accent-soft: #e8f2f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+nav.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  background: #f3f0e8;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+nav.sidebar .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+nav.sidebar .tagline { font-size: .8rem; color: var(--muted); margin-bottom: 1.25rem; }
+nav.sidebar ol { list-style: none; margin: 0; padding: 0; counter-reset: ch; }
+nav.sidebar li { margin: .15rem 0; counter-increment: ch; }
+nav.sidebar a {
+  display: block; padding: .3rem .55rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-size: .9rem;
+}
+nav.sidebar a::before { content: counter(ch) ". "; color: var(--muted); font-size: .8rem; }
+nav.sidebar a.active, nav.sidebar a:hover {
+  background: var(--accent); color: #fff;
+}
+nav.sidebar a.active::before, nav.sidebar a:hover::before { color: #cfe3e1; }
+nav.sidebar .back { margin-top: 1.5rem; font-size: .8rem; }
+nav.sidebar .back a { color: var(--muted); }
+main {
+  max-width: 52rem;
+  padding: 2.5rem 3rem 4rem;
+}
+header.sitetitle { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 2rem; }
+header.sitetitle h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+header.sitetitle p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
+main h2 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem; margin-top: 2.2rem; border-bottom: 1px solid var(--line);
+  padding-bottom: .25rem; }
+main h3 { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; margin-top: 1.6rem; }
+main blockquote {
+  margin: 1.2rem 0; padding: .7rem 1.1rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+main code {
+  font: .88rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: #f0ede4; padding: .1em .35em; border-radius: 4px;
+}
+main pre { background: #2c2f33; color: #e6e6e6; padding: 1rem 1.25rem;
+  border-radius: 8px; overflow-x: auto; line-height: 1.55; }
+main pre code { background: none; color: inherit; padding: 0; font-size: .85rem; }
+main table { border-collapse: collapse; width: 100%; margin: 1.2rem 0;
+  font-size: .93rem; }
+main th, main td { border: 1px solid var(--line); padding: .45rem .65rem;
+  text-align: left; }
+main th { background: #f0ede4; }
+main a { color: var(--accent); }
+main hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+footer.pagefoot {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; }
+  nav.sidebar { border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5rem 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sidebar">
+    <div class="brand">The Budget AI PC Guide</div>
+    <div class="tagline">Run local AI on a used-parts PC — plain English, budget ceilings, no hype.</div>
+    <ol>
+      <li><a href="index.html">Start here</a></li>
+      <li><a href="old-laptop-first.html">1. old laptop first</a></li>
+      <li><a href="parts-explained.html" class="active">2. parts explained</a></li>
+      <li><a href="price-targets.html">3. price targets</a></li>
+      <li><a href="silent-vs-speed.html">4. silent vs speed</a></li>
+      <li><a href="ram-and-vram.html">5. ram and vram</a></li>
+      <li><a href="shopping-worksheet.html">6. shopping worksheet</a></li>
+      <li><a href="first-boot-checklist.html">7. first boot checklist</a></li>
+      <li><a href="ollama-install-day.html">8. ollama install day</a></li>
+      <li><a href="upkeep.html">9. upkeep</a></li>
+      <li><a href="glossary.html">10. glossary</a></li>
+    </ol>
+    <div class="back"><a href="index.html">← back to start (11 chapters)</a></div>
+  </nav>
+  <main>
+    <header class="sitetitle">
+      <h1>The Budget AI PC Guide</h1>
+      <p>A friendly, budget-first guide from <strong>Asdale Dynamics, LLC</strong>. Education only.</p>
+    </header>
+<h1 id="what-each-part-does">What Each Part Does</h1>
+<p><em>Eight parts. One per plain-English explanation. Know what you're buying before you buy it.</em></p>
+<p>A desktop computer is exactly eight jobs stacked together in a box. Once you can name the jobs, every parts listing on every secondhand marketplace turns from alphabet soup into a short menu. That's the goal of this chapter: by the end, you should be able to look at any listing and say what it is and roughly why it matters to <em>you</em>.</p>
+<p>We'll keep a constant steering note through this chapter, because it's the one idea that makes budget AI builds different from budget gaming builds:</p>
+<blockquote>
+<p><strong>In a gaming PC, the graphics card is for pictures. In an AI PC, the graphics card is for thinking.</strong> Every AI model is a mountain of simple math, and the graphics card is a machine built to do exactly that kind of math, very fast, in parallel. Everything else in the box exists to keep it fed and supported.</p>
+</blockquote>
+<h2 id="1-the-cpu-the-manager">1. The CPU — the manager</h2>
+<p>The <strong>central processing unit</strong> is the general-purpose worker. It runs your operating system, your browser, the tool that serves the AI, the input from your mouse — everything <em>except</em> the raw model math. It's also the fallback brain: some small models can run on the CPU alone, which is how even an old laptop manages anything at all.</p>
+<p>For an AI desktop, the CPU is a supporting actor. You need <em>enough</em> cores (4 to 8 is plenty), reasonable age (under ~8 years old is fine), and no more money spent than that. A used mid-grade office-desktop CPU costs about as much as a pizza and does the job nearly as well as its fancy cousins.</p>
+<p><strong>When listing-shopping, look for:</strong> core count (4+), and anything described as mid-grade from the last several generations. Don't pay a premium for the top of any family — the graphics card does the heavy lifting.</p>
+<h2 id="2-the-motherboard-the-nervous-system">2. The motherboard — the nervous system</h2>
+<p>The <strong>motherboard</strong> is the green (or now often black) board everything plugs into. It connects the CPU to the memory to the storage to the graphics card, and it decides, quietly, what upgrades are possible later.</p>
+<p>Two spec lines matter for you:</p>
+<ul>
+<li><strong>Ram slots</strong>: 2 or 4. More slots = easier future upgrades.</li>
+<li><strong>Socket type</strong>: the physically shaped connector the CPU drops into. CPU and motherboard must <em>match</em> here. When buying used, an easy path is to buy the CPU and motherboard <strong>as a matched pair</strong> from one seller — it costs slightly more than separate but removes the single most common beginner mistake: buying parts that physically can't talk to each other.</li>
+</ul>
+<p>Also check it has: a slot for your graphics card (nearly universal), an Ethernet port, and at least the number of ports your storage will use.</p>
+<p><strong>When listing-shopping, look for:</strong> the matching socket name for your CPU, "DDR4" or "DDR3" (this is the memory-generation label — more in the RAM section), and words like "micro-ATX" (a slightly smaller, cheaper size that fits normal towers).</p>
+<h2 id="3-ram-the-workbench">3. RAM — the workbench</h2>
+<p><strong>RAM</strong> (random access memory) is your computer's workbench: the space where whatever you're working on <em>right now</em> lives. It's not storage — turn the computer off and the workbench is wiped. It matters to local AI as the "overflow area" when a model doesn't entirely fit on the graphics card.</p>
+<p>This is the cheapest place for a beginner to buy confidence:</p>
+<ul>
+<li><strong>8 GB</strong> — works, feels cramped when multitasking.</li>
+<li><strong>16 GB</strong> — the honest sweet spot for normal use and small-to-mid models.</li>
+<li><strong>32 GB</strong> — the comfortable zone for pushing bigger models, at a used-market price that's usually modest.</li>
+</ul>
+<p><strong>When listing-shopping, look for:</strong> the DDR generation matching your motherboard (DDR3 vs DDR4 vs DDR5 — they're shaped differently and physically cannot cross over), and matching speed is nice-to-have but not a priority number one. Buying a pair of identical sticks ("a matched pair of 8 GB") is the correct beginner move, because pairs run faster than single sticks on most boards.</p>
+<p>Deeper detail on how RAM and the graphics card's memory share the AI burden lives in the <a href="ram-and-vram.html">RAM and VRAM chapter</a>.</p>
+<h2 id="4-the-graphics-card-the-thinking-engine">4. The graphics card — the thinking engine</h2>
+<p>This is the star of the show and the part to spend on. The <strong>graphics card</strong> (also called the video card or "GPU") is a specialized parallel-math machine. Every AI model you care about runs primarily on it — the speed you'll feel and the model sizes you can handle both come from it.</p>
+<p>Two numbers control your entire experience:</p>
+<ul>
+<li><strong>VRAM</strong>: the card's own fast memory (see next chapter) — decides <strong>which</strong> models can run.</li>
+<li><strong>Speed class</strong>: how fast the card's math is — decides <strong>how fast</strong> those models answer.</li>
+</ul>
+<p>Used-market reality check, said plainly and without naming any product: a used mid-grade, work-oriented, or previous-generation graphics card with <strong>8–12 GB of VRAM</strong> is the target for a first AI build. Cards with 6 GB can be excellent value. Cards below 6 GB deserve a deep discount and a modest role. Cards marketed as "gaming flagships from the last two years" are almost always sold at prices a frugal builder should refuse.</p>
+<p><strong>When listing-shopping, look for:</strong> the VRAM number <em>first</em>, then the age of the card. Prefer listings from someone who used the card in an office or home machine over listings photographed half-installed in a mining rig (more on why in the <a href="price-targets.html">price chapter</a>).</p>
+<h2 id="5-storage-the-bookshelf">5. Storage — the bookshelf</h2>
+<p><strong>Storage</strong> (a drive, usually an SSD) is where files live permanently: the operating system, your AI models, your documents. Unlike RAM, it survives power-off. You will be surprised how fast AI models eat disk space — they range from a few gigabytes to tens of gigabytes each.</p>
+<p>Plain-English guidance:</p>
+<ul>
+<li><strong>SSD vs HDD</strong>: an SSD (silent, fast, no moving parts) is worth nearly any price difference for your main drive. An HDD (older, slower, noisy, cheap) is acceptable <em>only</em> as secondary storage for files you rarely touch.</li>
+<li><strong>Size</strong>: 256 GB works but you'll feel the wall in a year. <strong>512 GB</strong> is realistic. <strong>1 TB</strong> is generous peace-of-mind, and used drives of this size usually aren't much more.</li>
+</ul>
+<p><strong>When listing-shopping, look for:</strong> "SSD" and the word "SATA" or "NVMe" (both are fine types; NVMe is a bit faster). Beware sellers listing HDDs as though their cheapness were a virtue — it is, but you'll regret making one your main drive.</p>
+<h2 id="6-the-power-supply-the-heart">6. The power supply — the heart</h2>
+<p>The <strong>power supply unit (PSU)</strong> converts wall electricity into the steady, safe, several-voltage meal your parts eat. It's the part with the largest gap between "boring" and "critically important." A bad PSU doesn't just fail — a <em>cheap, worn-out</em> one can damage other parts on its way out.</p>
+<p>Budget-build guidance:</p>
+<ul>
+<li>Size (measured in watts): 450–550 W is comfortably enough for most AI builds; 650 W only if your graphics card is a power-hungry one.</li>
+<li><strong>Buy used-ish, not used-hard.</strong> PSUs wear out silently. The used-market value of a PSU is modest; a <em>new</em>, reputable-but-inexpensive one costs roughly a dinner out and is one of the two parts (with the case) we give you permission to buy new. This is worth saying plainly: <strong>new PSU</strong> is a budget-build cheat code.</li>
+</ul>
+<p><strong>When listing-shopping (if you do go used), look for:</strong> known-brand names, an "80 Plus" sticker (any color level — it just means it's efficient enough not to waste heat), and who is selling. Avoid mystery brands and photo-blurry wires.</p>
+<h2 id="7-the-case-the-skeleton-and-the-noise-chamber">7. The case — the skeleton (and the noise chamber)</h2>
+<p>The <strong>case</strong> is a metal box: it holds everything, protects it from dust and cats, and — this is the part beginners learn the hard way — it makes most of the <strong>noise</strong>.</p>
+<p>Case shopping is almost entirely about practicality:</p>
+<ul>
+<li><strong>Standard "mid-tower" size</strong> — fits all normal parts, easy to work in, cheap used.</li>
+<li><strong>Includes at least one fan</strong> — the case usually comes with one or two. Fans are how air moves; air is how heat leaves; heat is how electronics die young.</li>
+<li><strong>Front panel has USB ports</strong> — small daily quality-of-life win.</li>
+<li><strong>Bonus, if you can find it cheap: "sound-dampened" panels</strong> — foam-lined, genuinely quieter. Not essential; the same result can come from choosing slow, quiet case fans, which is covered in the <a href="silent-vs-speed.html">silent vs. speed chapter</a>.</li>
+</ul>
+<p>Shopping note: cases are one of the most commonly <em>given away</em> parts — people upgrade for aesthetics and their old black boxes sit in a closet. Ask downright politely; a building's worth of people have one.</p>
+<h2 id="8-the-cooler-the-little-fan-on-the-cpu">8. The cooler — the little fan on the CPU</h2>
+<p>The last part is the <strong>CPU cooler</strong>: a small heat sink and fan that sits directly on top of the CPU. Sometimes the user manually attaches it; sometimes the CPU comes with one in the box (an "included stock cooler" — perfectly usable). It is not optional, even briefly: a CPU with no cooler on top of it will overheat in seconds of operation.</p>
+<p>You will rarely think about this part again after installation. Use the free one if it's in the box; buy a basic one (~$15–25 range at the writing of this guide) if not. The performance ceiling of a budget AI build is set by the graphics card, and the graphics card cools itself.</p>
+<hr />
+<p>That's the whole box. Eight jobs: <strong>manage</strong> (CPU), <strong>connect</strong> (motherboard), <strong>hold your workspace</strong> (RAM), <strong>think</strong> (graphics card), <strong>remember</strong> (storage), <strong>feed</strong> (power supply), <strong>house and quiet</strong> (case), <strong>keep cool</strong> (cooler).</p>
+<p>Next up: the money. <a href="price-targets.html">How much each part should actually cost, and three total budgets that respect you.</a></p>
+<hr />
+<p><em>© Asdale Dynamics, LLC. Educational content only — this guide describes part categories, not specific products. Local sellers, local listings, your local prices.</em></p>
+    <footer class="pagefoot">© Asdale Dynamics, LLC — education only, no product endorsements. This site is generated locally and works offline.</footer>
+  </main>
+</div>
+</body>
+</html>
